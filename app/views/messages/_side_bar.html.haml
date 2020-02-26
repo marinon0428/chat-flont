@@ -1,13 +1,15 @@
 .header
   .header__logo
-    .header__box
-      peoc
-      .header__icon
-      = link_to "#", class: "contents__btn contents__btn--" do
-        = icon('far', 'edit', class: "contents__btn--icon")
+    %h3.header__box
+      = current_user.name
+      %ul.header__icons
+        %li.icon
+      = link_to do
+        = icon('far', 'edit', class: "icon")
         %span<>
-      = link_to "#", class: "contents__btn contents__btn--" do
-        = icon('fas', 'cog', class: "contents__btn--icon")
+        %li.icon
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog', class: "icon")
         %span<>
   .header__main
     .header__name
