@@ -25,8 +25,17 @@
   &__icon{
   margin-right: 100px;
   width: 60px;
-  color:white;
   }
+}
+
+.fa-edit:before {
+  content: "";
+  color: white;
+}
+
+.fa-cog:before {
+  content: "";
+  color: white;
 }
 
 .header__main {
@@ -65,6 +74,7 @@
   line-height: 100px;
   }
   &__edit{
+    text-decoration: none;
     list-style: none;
     display: inline;
     font-size: 16px;
