@@ -4,12 +4,11 @@
       = current_user.name
       %ul.header__icons
         %li.icon
-      = link_to do
-        = icon('far', 'edit', class: "icon")
-        %span<>
-        %li.icon
       = link_to edit_user_path(current_user) do
-        = icon('fas', 'cog', class: "icon")
+        = icon('far', 'edit', class: 'icon')
+        %span<>
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog', class: 'icon')
         %span<>
   .header__main
     .header__name
