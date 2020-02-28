@@ -1,25 +1,41 @@
 .contents
   .contents__top
     .contents__menber
-      TEST
+      = @group.name
     .contents__group
-      Group
+      %Member: 
+      - @group.users.each do |user|
+        = user.name
     .contents__edit
-      = link_to"#",class:"group" do
+      = link_to edit_group_path(@group) do
         .group
           Edit
+
   .contents__midle
-    .contents__name
-      masa
-    .contents__time
-      2019/11/20(Wed)
-    .contents__message
+    .message
+      .upper-message 
+        .contents__name
+          masa
+        .contents__time
+          2019/11/20(Wed)
+      .contents__message
       こんにちは
+      
+    .message
+      .upper-message 
+        .contents__name
+          masa
+        .contents__time
+          2019/11/20(Wed)
+      .contents__message
+      こんにちは
+
+
   .form
-    %form.new_message
-      .input-box
-        %input{type:"text",class:"input-box__text",placeholder:"type a massage"}
-        %label{class:"input-box__image"}
-          = icon('fas','image')
-          %input{type:"file",class:"input-box__image__file"}
-      %input{type:"submit",class:"submit-btn"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__box
+        = f.label :image, class: 'form__box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

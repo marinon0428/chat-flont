@@ -41,19 +41,31 @@
 .header__main {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
-  color:#fff;
+  color: white;
   padding-left: 20px;
-  padding-top: 15px;
-  &__name{
-  height: 40px;
-  font-size: 15px;
-  font-family: #666666 bold;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  .group{
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name{
+      text-decoration: none;
+      color: white;
+      height: 20px;
+      font-size: 15px;
+      font-family: #666666 bold;
+    }
+    &__comennts{
+      text-decoration: none;
+      color: white;
+      padding-top: 5px;
+      font-size: 5px;
+      font-family: #666666 bold;
+    }
   }
-}
-.header__comennts{
-  padding-top: 5px;
-  font-size: 5px;
-  font-family: #666666 bold;
 }
 
 .contents {
@@ -94,67 +106,75 @@
   }
 
   .contents__midle{
-  background-color: #fafafa;
-  height: calc(100vh - 190px);
-  padding-top: 35px;
-  padding-bottom: 46px;
-  padding-left: 40px;
-  display: flex;
-  }
-  &__name{
-  font-size: 16px;
-  color: #333333;
-  display: flex;
-  }
-  &__time{
-  display: flex;
-  font-size: 12px;
-  color: #999999;
-  padding-left: 10px;
-  }
-  &__message{
-  position: absolute;
-  padding-top: 35px;
-  font-size: 14px;
-  }
-}
-
-.form{
-  background-color: #d2d2d2;
-  height: 90px;
-  padding: 20px 40px;
-  form{
-    display: flex;
-    .input-box {
-      display: flex;
-      width: 100%;
-      position: relative;
-      &__text {
-        height: 50px;
-        width: 100%;
-        color: #434a54;
-        border-style: none;
-        padding: 0 40px 0 10px;
-      }
-      &__image{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 1.3rem;
-
-        &__file{
-          display: none;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    padding: 40px 40px 90px;
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    bottom: 90px;
+    left: 300px;
+    z-index: 0;
+    .message{
+      .upper-message {
+        display: flex;
+        padding-top: 15px;
+        .contents__name{
+          color: $black;
+          font-size: 16px;
+          font-weight: bold;
         }
+        .contents__time{
+          font-size: 12px;
+          color: #999999;
+          padding-left: 10px;
+        }
+      .contents__message{
+        padding-top: 35px;
+        font-size: 15px;
       }
     }
-    .submit-btn {
-      width: 100px;
+  }
+  }
+
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    width: calc(100% - 300px);
+    padding: 20px 50px 20px 40px;
+    position: fixed;
+    bottom: 0;
+    left: 300px;
+    z-index: 5;
+    &__message {
+      border: none;
+      float: left;
       height: 50px;
-      padding: 0 30px;
+      width: calc(100% - 150px);
+    }
+    &__box {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
       margin-left: 15px;
-      background-color: #38aef0;
-      color: white;
+      padding: 0 30px;
       cursor: pointer;
     }
   }

@@ -4,15 +4,24 @@
       = current_user.name
       %ul.header__icons
         %li.icon
-      = link_to do
-        = icon('far', 'edit', class: "icon")
+      = link_to new_group_path do
+        = icon('far', 'edit', class: 'icon')
         %span<>
-        %li.icon
       = link_to edit_user_path(current_user) do
-        = icon('fas', 'cog', class: "icon")
+        = icon('fas', 'cog', class: 'icon')
         %span<>
+
   .header__main
-    .header__name
-      techcamp
-    .header__comennts
-      まだメッセージはありません。
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .header__name
+            = group.name
+          .header__comennts
+            = group.show_last_message
+      .group
+        = link_to group_messages_path(group) do
+          .header__name
+            = group.name
+          .header__comennts
+            = group.show_last_message
