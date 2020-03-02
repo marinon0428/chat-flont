@@ -51,7 +51,7 @@ $(function(){
     processData: false,
     contentType: false
   })
-  .done(function(data){
+  .always(function(data){
     var html = buildHTML(data);
     $('.contents__midle').append(html);  
     $('.contents__midle').animate({ scrollTop: $('.contents__midle')[0].scrollHeight});    
@@ -61,5 +61,5 @@ $(function(){
   .fail(function() {
     alert("メッセージ送信に失敗しました");
 　})
+ })
 })
-});
