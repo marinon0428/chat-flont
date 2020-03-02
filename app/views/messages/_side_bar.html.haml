@@ -4,7 +4,6 @@
       = current_user.name
       %ul.header__icons
         %li.icon
-
       = link_to new_group_path do
         = icon('far', 'edit', class: 'icon')
         %span<>
@@ -14,12 +13,6 @@
 
   .header__main
     - current_user.groups.each do |group|
-      .group
-        = link_to group_messages_path(group) do
-          .header__name
-            = group.name
-          .header__comennts
-            = group.show_last_message
       .group
         = link_to group_messages_path(group) do
           .header__name

@@ -12,24 +12,7 @@
           Edit
 
   .contents__midle
-    .message
-      .upper-message 
-        .contents__name
-          masa
-        .contents__time
-          2019/11/20(Wed)
-      .contents__message
-      こんにちは
-      
-    .message
-      .upper-message 
-        .contents__name
-          masa
-        .contents__time
-          2019/11/20(Wed)
-      .contents__message
-      こんにちは
-
+    = render @messages
 
   .form
     = form_for [@group, @message] do |f|
