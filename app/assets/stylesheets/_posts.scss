@@ -46,19 +46,20 @@
   padding-top: 20px;
   padding-bottom: 15px;
   text-decoration: none;
+
   .group{
     text-decoration: none;
     color: white;
     box-sizing: border-box;
     padding: 20px 0 40px;
-    &__name{
+    .group__name{
       text-decoration: none;
       color: white;
       height: 20px;
       font-size: 15px;
       font-family: #666666 bold;
     }
-    &__comennts{
+    .group__comennts{
       text-decoration: none;
       color: white;
       padding-top: 5px;
@@ -123,7 +124,7 @@
           font-size: 16px;
           font-weight: bold;
         }
-        .contents__time{
+        .upper-message__date{
           font-size: 12px;
           color: #999999;
           padding-left: 10px;
