@@ -66,6 +66,10 @@
       font-size: 5px;
       font-family: #666666 bold;
     }
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
@@ -94,6 +98,9 @@
     border: 1px solid #38aef0;
     padding: 10px 15px;
   }
+  a{
+    text-decoration: none;
+   }
   &__group {
   position: absolute;
   display: flex;
@@ -102,9 +109,6 @@
   color: #999999;
   }
 
-  .group{
-    text-decoration: none;
-  }
 
   .contents__midle{
     box-sizing: border-box;

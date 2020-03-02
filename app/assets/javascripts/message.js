@@ -53,8 +53,8 @@ $(function(){
   })
   .done(function(data){
     var html = buildHTML(data);
-    $('.messages').append(html);  
-    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});    
+    $('.contents__midle').append(html);  
+    $('.contents__midle').animate({ scrollTop: $('.contents__midle')[0].scrollHeight});    
     $('form')[0].reset();
   })
 })
