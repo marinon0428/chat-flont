@@ -51,11 +51,14 @@ $(function(){
     processData: false,
     contentType: false
   })
-  .always(function(data){
+  .done(function(data){
     var html = buildHTML(data);
     $('.contents__midle').append(html);  
     $('.contents__midle').animate({ scrollTop: $('.contents__midle')[0].scrollHeight});    
     $('form')[0].reset();
+    $('input').prop('disabled', false);
+  })
+  .always(function(data){
     $('input').prop('disabled', false);
   })
   .fail(function() {
